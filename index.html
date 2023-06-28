@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<meta http-equiv="Content-Security-Policy" content="">
+
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+        <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+        <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" charset="utf-8"></script>
+        <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" charset="utf-8"></script>
+        <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+        <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+        <script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
+		
+        <title>MegaMax Sales</title>
+    </head>
+    <body>
+        <div class="app">
+            <h4>MegaMax Sale</h4>
+            <div>
+                <!-- TODO I. User Information -->
+                <input type="text" id="userID" value="" placeholder="User ID..." />
+                <input type="password" id="password" placeholder="Password...">
+                <input type="text" id="clientID" value="" placeholder="Client ID..." />
+                <input type="button" value="Begin Order" onclick="controller.beginOrder()" />
+            </div>
+            
+            <div>
+                <!-- TODO II. Widget navigation buttons -->
+                <input type="button" value="Previous Widget" onclick="controller.previousWidget()" />
+                <input type="button" value="Next Widget" onclick="controller.nextWidget()" />
+            </div>
+            <div>
+                <!-- TODO III. Widget display-->
+                <figure>
+                    <img src="" alt="Widget Image" id="widgetImage" style="width: 100%; height: 20%;" />
+                    <figcaption id="widgetCaption">Widget info</figcaption>
+                </figure>
+            </div>
+            <div>
+                <!-- TODO IV. Order navigation buttons and display -->
+                <input type="text" id="orderAmount" value="" placeholder="Amount of widgets..." />
+                <input type="text" id="agreedPrice" value="" placeholder="Agreed price in pence..." />
+                <br>
+                <input type="button" value="Add order" onclick="controller.addOrder()" />
+                <input type="button" value="End order" onclick="controller.endOrder()" />
+                <table id="orderTable">
+                    <tr>
+                        <th>Order Details: added items will appear below</th>
+                        <th></th>
+                    </tr>
+                </table>
+            </div>
+            <!-- TODO V. Map canvas -->
+            <input type="button" value="Update Map" onclick="controller.updateMap()" />
+            <div id="mapContainer"></div>
+        </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/helpers.js"></script>		
+    <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
