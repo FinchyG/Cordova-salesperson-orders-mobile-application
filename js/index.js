@@ -60,7 +60,7 @@ function MegamaxSale() {
 
     // Initialize the platform object:
     var platform = new H.service.Platform({
-        apikey: "FProRL5cjWtiuvSgl13WrA"
+        apikey: "ExampleKey"
     });
     // Obtain the default map types from the platform object:
     var defaultLayers = platform.createDefaultLayers();
